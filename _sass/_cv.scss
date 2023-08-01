@@ -190,6 +190,10 @@ ul.timeline li::before {
   top: -0.5rem;
 }
 
+table.table .pl-2 a{
+  color: var(--global-link-color);
+}
+
 /*ul.timeline::before {
      content: "●";
      font-size: 1em;
