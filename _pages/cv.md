@@ -4,6 +4,6 @@ permalink: /cv/
 title: CV
 nav: true
 nav_order: 6
-cv_pdf: cv_fabio.pdf
+#cv_pdf: cv_fabio.pdf
 description:
 ---
