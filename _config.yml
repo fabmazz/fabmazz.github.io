@@ -6,7 +6,7 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Fabio 
 middle_name: 
 last_name: Mazza
-email: fab4mazz@gmail.com
+email: fabio.mazza@outlook.it
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Personal website of Fabio Mazza
 footer_text: >
@@ -31,7 +31,7 @@ highlight_theme_light: github   # https://github.com/jwarby/jekyll-pygments-them
 highlight_theme_dark: native    # https://github.com/jwarby/jekyll-pygments-themes
 
 # repo color theme
-repo_theme_light: default       # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
+repo_theme_light: vue       # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 repo_theme_dark: dark           # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 repo_trophies:
   enabled: true
@@ -188,6 +188,7 @@ latest_posts:
 # Markdown and syntax highlight
 markdown: kramdown
 highlighter: rouge
+highlight_theme: github
 kramdown:
   input: GFM
   syntax_highlighter_opts:
