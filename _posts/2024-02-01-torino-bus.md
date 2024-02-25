@@ -9,7 +9,7 @@ I have recently begun analysing a dataset of real-time positions of the vehicles
 
 The positions have been collected over the first two weeks of December 2023, and the total amount is about 21 million, from all public transport lines.
 You can see how many positions are collected at each minute in the figure below:
-{% include figure.html path="assets/img/positions/counts_pos.png" title="Count of positions updates" class="img-fluid rounded z-depth-1" %}
+{% include image.html path="assets/img/positions/counts_pos.png" title="Count of positions updates" class="img-fluid rounded z-depth-1" %}
 
 It's curious to note that on the weekend the number of positions collected is markedly lower (the 3rd of December was a Sunday, and the 8th December is a national holiday in Italy).
 
@@ -18,7 +18,7 @@ Because of the very high number of positions, and of my ever-present interest in
 ## Cleaning up the data
 The dataset had to be removed of all spurious data points which could not be possibly explained.
 In fact, there are several points that were very far from Italy, or from Turin in general. Some trams GPS, were, for example, continuously jumping from Turin to Genoa for no apparent reason: this made for an average speed of more than 1000 km/h!
-{% include figure.html path="assets/img/positions/jumping_line.jpg" title="Vehicle jumping around" class="img-fluid rounded z-depth-1" %}
+{% include image.html path="assets/img/positions/jumping_line.jpg" title="Vehicle jumping around" class="img-fluid rounded z-depth-1" %}
 <div class="caption">
 	A trace of a vehicle jumping continuously from Turin to another city
 </div>
@@ -44,7 +44,7 @@ I put the mean averaged by the distance between the two ends of the segment.
 
 Below you can see an example on the map, with the line trajectory or polyline in grey, the section points in light blue, and the trace in blu with each of its point highlighted. The red crosses represent the new point that are inserted in the vehicle trace:
  <div class="mt-0 mt-md-0 mx-auto float-end" style="max-width:350px">
-        {% include figure.html path="assets/img/positions/line_section.jpg" title="Line sections and trace"  class="float-end img-fluid rounded z-depth-1" %}
+        {% include image.html path="assets/img/positions/line_section.jpg" title="Line sections and trace"  class="float-end img-fluid rounded z-depth-1" %}
     </div>
 
 The polyline was also useful to the determine when the bus was leaving service and going to the depot: by keeping the vehicle positions within a small threshold of the polyline points (about 30 meters), the trace of the vehicle was well defined.
@@ -55,10 +55,10 @@ After this part was done, I was able to compute the average per section on each 
 From this new dataset, I've obtained a few different results, averaging the speed on either just the section or the hour of the day. The two figures below show the average speed on the map, and for each section at each day.
 
 <div class="mt-0 mt-md-0 mx-auto float-end" style="max-width:500px">
-        {% include figure.html path="assets/img/positions/avg_speed_map_09_1.jpg" title="Average speed for section"  class="float-end img-fluid rounded z-depth-1" %}
+        {% include image.html path="assets/img/positions/avg_speed_map_09_1.jpg" title="Average speed for section"  class="float-end img-fluid rounded z-depth-1" %}
 </div>
 <div class="mt-0 mt-md-0 mx-auto float-end">
-        {% include figure.html path="assets/img/positions/avg_speed_matr_09_1.jpg" title="Average speed for section"  class="float-end img-fluid rounded z-depth-1" %}
+        {% include image.html path="assets/img/positions/avg_speed_matr_09_1.jpg" title="Average speed for section"  class="float-end img-fluid rounded z-depth-1" %}
 </div>
 
 From these two figures, it can be seen that the speed varies a lot depending on the part of the trajectory, and it's unclear on which factors it depends. Since the 9 is a tramway line, it might be possible that the high speed of section 19 is due to the state of the tracks there (it's completely separated by other traffic). However, the presence of close stops might also explain the low speed of other sections.
