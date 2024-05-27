@@ -1,9 +1,14 @@
 - title: Education
   type: time_table
   contents:
-    - title: PhD Student
+    - title: PostDoc @ Data Science Lab, DEIB
+      institution: Politecnico di Milano, Milan, Italy
+      year: 2024 - ongoing
+      description: The research focuses on the possible effects of disinformation spreading on social media, in the context of epidemic spreading.
+
+    - title: PhD in Physics
       institution: Politecnico di Torino, Turin, Italy
-      year: 2019-2023
+      year: 2019 - 2023
       description: Applications of statistical physics techniques to epidemic inference problems  
 
     - title: M. Sc. (M2) in Physics of Complex Systems
@@ -14,13 +19,13 @@
     
     - title: M. Sc. in Physics of Complex Systems
       institution: Politecnico di Torino, Turin, Italy
-      year: 2017-2019
+      year: 2017 - 2019
       description:
         - Double degree international track  
         - Thesis on "Multiscale modeling of influenza viral emergence"
     - title: Bachelor in Physical Engineering
       institution: Politecnico di Torino, Turin, Italy
-      year: 2014-2017
+      year: 2014 - 2017
       description:
 
 
@@ -28,6 +33,6 @@
   type: time_table
   contents:
     - title: <a href="https://gitpull.it/w/librebusto/it/">Libre BusTO</a>
-      year: 2016-now
+      year: 2016 - now
       description: An open source Android application for the public transport in Turin, Italy
 
