@@ -17,9 +17,10 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Former PhD Student at Politecnico di Torino (defended PhD thesis in July 2023) in the [Statistical Physics group](https://www.disat.polito.it/research/research_groups/cmpcs/statistical_physics_and_interdisciplinary_applications) in the Dipartimento di Scienze Applicate e Tecnologia (DISAT). My research interests lie in between complex networks, statistical physics, data science and AI. 
-During my PhD, I focused on applying statistical physics to epidemic inference, and in particular in controlling epidemic outbreaks with probabilistic methods.
+I'm a post-doctoral researcher in the [Data Science Group](https://datascience.deib.polimi.it/) in Politecnico di Milano, Italy, investigating the effects of the propagation of disinformation on the spread of epidemics, with agent-based models at the urban scale. 
 
-I'm currently working as a post-doc in the [Data Science Group at Politecnico di Milano](https://datascience.deib.polimi.it/), studying the effects of the propagation of disinformation on social media on the spread of epidemics at the urban scale, using agent-based models.
+I've completed my PhD in Politecnico di Torino in the [Statistical Physics group](https://www.disat.polito.it/research/research_groups/cmpcs/statistical_physics_and_interdisciplinary_applications). During my PhD, I focused on the application of statistical physics methods to epidemic inference, with the goal of controlling and containing epidemic outbreaks.
 
-I am also interested in computer science, and open source software. I've been involved in the development of the Android app [Libre BusTO](https://play.google.com/store/apps/details?id=it.reyboz.bustorino), adding new features and fixing bugs since 2016.
+
+My research interests lie in complex networks, statistical physics, data science and AI.
+I am also interested in computer science and open source software. I've been involved in the development of the Android app [Libre BusTO](https://gitpull.it/w/librebusto/en/), adding new features and fixing bugs since 2016.
