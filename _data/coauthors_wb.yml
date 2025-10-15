@@ -1,0 +1,35 @@
+"Adams":
+  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
+    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+
+"Dall'Asta":
+  - firstname: ["Luca", "L."]
+    url: https://www.polito.it/personale?p=027344
+
+"Muntoni":
+  - firstname: ["Anna Paola", "A. P."]
+    url: https://www.polito.it/personale?p=anna.muntoni
+
+"Bach": 
+  - firstname: ["Johann Sebastian", "J. S."]
+    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+
+  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
+    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+
+"Braunstein":
+  - firstname: ["Alfredo", "A."]
+    url: https://staff.polito.it/alfredo.braunstein/
+
+"Brambilla":
+  - firstname: ["Marco", "M."]
+    url: https://www.deib.polimi.it/ita/personale/dettagli/108614
+
+"Pierri":
+  - firstname: ["Francesco", "F."]
+    url: https://pierri.faculty.polimi.it/
+
+"Piccardi":
+  - firstname: ["Carlo", "C."]
+    url: https://piccardi.faculty.polimi.it/
+
