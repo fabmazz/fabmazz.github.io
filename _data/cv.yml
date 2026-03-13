@@ -1,11 +1,14 @@
-- title: Education
+- title: Experience
   type: time_table
   contents:
     - title: PostDoc @ Data Science Lab, DEIB
       institution: Politecnico di Milano, Milan, Italy
-      year: 2024 - ongoing
-      description: The research focuses on the possible effects of disinformation spreading on social media, in the context of epidemic spreading.
+      year: 2024 - 2026
+      description: Part of the <a href="https://www.code-project.it">CODE project</a> - Coupling Opinion Dynamics with Epidemics. In the PoliMi unit, I studied the effects of misinformation in epidemic on large-scale contact networks applied to urban environments.
 
+- title: Education
+  type: time_table
+  contents:
     - title: PhD in Physics
       institution: Politecnico di Torino, Turin, Italy
       year: 2019 - 2023
