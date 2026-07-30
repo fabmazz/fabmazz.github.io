@@ -1,40 +1,32 @@
-FROM bitnami/minideb:latest
+# Use a slim Ruby image as the base
+FROM ruby:3.1-slim
 
-Label MAINTAINER Amir Pourmand
+# Set environment variables for UTF-8 encoding and non-interactive package installation
+ENV LANG=C.UTF-8 \
+    LC_ALL=C.UTF-8 \
+    DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update -y
+# Install essential build tools and dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    git \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
 
-# add locale
-RUN apt-get -y install locales
-# Set the locale
-RUN sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen && \
-    locale-gen
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US:en
-ENV LC_ALL en_US.UTF-8
+# Set the working directory inside the container
+WORKDIR /usr/src/app
 
-# add ruby and jekyll
-RUN apt-get install --no-install-recommends ruby-full build-essential zlib1g-dev -y
-RUN apt-get install imagemagick -y
+# Copy the Gemfile and Gemfile.lock
+COPY Gemfile* ./
 
-# install python3 and jupyter
-RUN apt-get install python3-pip -y
-RUN python3 -m pip install jupyter --break-system-packages
+# Install Bundler and project dependencies
+RUN gem install bundler && bundle install
 
-# install jekyll and dependencies
-RUN gem install jekyll bundler
+# Copy the rest of the source code
+COPY . .
 
-RUN mkdir /srv/jekyll
+# Expose port 4000
+EXPOSE 4000
 
-ADD Gemfile /srv/jekyll
-
-WORKDIR /srv/jekyll
-
-RUN bundle install
-
-# Set Jekyll environment
-ENV JEKYLL_ENV=production 
-
-EXPOSE 8080
-
-CMD ["/bin/bash", "-c", "rm -f Gemfile.lock && exec jekyll serve --watch --port=8080 --host=0.0.0.0 --livereload --verbose --trace"]
+# Start the Jekyll development server with live reloading
+CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--watch"]
