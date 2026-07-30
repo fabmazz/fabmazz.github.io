@@ -1,9 +1,11 @@
-version: "3"
-# this file uses prebuilt image in dockerhub
 services:
   jekyll:
-    image: amirpourmand/al-folio
-    ports:
-      - 8080:8080
+    image: jekyll-site:latest
+    build:
+      context: .
     volumes:
-      - .:/srv/jekyll
+      - .:/usr/src/app:Z
+      - /usr/src/app/_site
+    ports:
+      - "4000:4000"
+    command: bundle exec jekyll serve --host 0.0.0.0 --watch
