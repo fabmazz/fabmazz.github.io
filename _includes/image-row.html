@@ -1,0 +1,54 @@
+{%- assign paths = include.images | split: "|" -%}
+{%- assign alts = include.alts | split: "|" -%}
+{%- assign titles = include.titles | split: "|" -%}
+{%- assign captions = include.captions | split: "|" -%}
+
+<div class="image-row{% if include.rowclass %} {{ include.rowclass }}{% endif %}">
+  {%- for raw_path in paths -%}
+    {%- assign path = raw_path | strip -%}
+    {%- assign idx = forloop.index0 -%}
+    {%- assign img_path = path | remove: ".jpg" | remove: ".jpeg" | remove: ".png" | remove: ".tiff" -%}
+
+    {%- if include.cache_bust -%}
+      {%- assign src = path | relative_url | bust_file_cache -%}
+    {%- else -%}
+      {%- assign src = path | relative_url -%}
+    {%- endif -%}
+
+    <figure {% if include.figclass %}class="{{ include.figclass }}"{% endif %}>
+      <a href="{{ src }}" target="_blank">
+        <picture>
+          {% if site.imagemagick.enabled %}
+          {% for i in site.imagemagick.widths -%}
+            <source
+              class="responsive-img-srcset"
+              media="(max-width: {{ i }}px)"
+              srcset="{{ img_path | relative_url }}-{{ i }}.webp"
+            />
+          {% endfor -%}
+          {% endif %}
+
+          <!-- Fallback to the original file -->
+          <img
+            src="{{ src }}"
+            {% if include.class %}class="{{ include.class }}"{% endif %}
+            {% if include.width %}width="{{ include.width }}"{% endif %}
+            {% if include.height %}height="{{ include.height }}"{% endif %}
+            {% if include.min-width %}min-width="{{ include.min-width }}"{% endif %}
+            {% if include.min-height %}min-height="{{ include.min-height }}"{% endif %}
+            {% if include.max-width %}max-width="{{ include.max-width }}"{% endif %}
+            {% if include.max-height %}max-height="{{ include.max-height }}"{% endif %}
+            alt="{{ alts[idx] | strip }}"
+            {% if titles[idx] %}title="{{ titles[idx] | strip }}"{% endif %}
+            {% if include.zoomable %}data-zoomable{% endif %}
+            onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
+          />
+        </picture>
+      </a>
+
+      {%- if captions[idx] -%}
+        <figcaption class="caption">{{ captions[idx] | strip }}</figcaption>
+      {%- endif %}
+    </figure>
+  {%- endfor -%}
+</div>
